@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.RedisHash;
 
 @RedisHash("User")
 public class User implements Serializable {
-	
+
 	Integer id;
 	
 	String userName;
@@ -46,6 +46,12 @@ public class User implements Serializable {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", userName=" + userName + ", age=" + age + ", title=" + title + "]";
 	}
 
 }
